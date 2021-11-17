@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.nikhil.moodle.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:onClick="onGroupItemClick"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="@string/action_help"
+        android:onClick="onGroupItemClick"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_course_offline"
+        android:orderInCategory="100"
+        android:onClick="onGroupItemClick"
+        android:title="@string/action_course_offline"
+        android:textColor="#0000FF"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_course_online"
+        android:orderInCategory="100"
+        android:onClick="onGroupItemClick"
+        android:title="@string/action_course_online"
+        android:textColor="#0000FF"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_checkall"
+        android:orderInCategory="100"
+        android:onClick="onGroupItemClick"
+        android:title="@string/action_checkall"
+        app:showAsAction="never" />
+    <item
+    android:id="@+id/action_uncheckall"
+    android:orderInCategory="100"
+    android:onClick="onGroupItemClick"
+    android:title="@string/action_uncheckall"
+    app:showAsAction="never" />
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:onClick="onGroupItemClick"
+        android:title="@string/action_save"
+        app:showAsAction="never" />
+</menu>

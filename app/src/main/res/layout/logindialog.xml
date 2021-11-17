@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="10dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Enter Name"
+    android:id="@+id/textView" />
+
+<EditText
+    android:id="@+id/edittext"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter text here.."
+    android:padding="10dp" />
+<NumberPicker
+    android:id="@+id/numberPicker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="64dp" />
+</LinearLayout>
