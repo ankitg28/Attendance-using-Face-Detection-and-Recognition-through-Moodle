@@ -1,0 +1,80 @@
+<?php
+
+$string=$GET["username"]; 
+
+$json = json_decode($string, true);
+
+    foreach ($json as $key => $value){
+        if($key=="token")
+	{
+		$store=$value;
+	}
+	echo "$key: $value\n";
+    };
+if($_POST["requestType"] == "tokencheck")
+{
+	//$respocetype = array("type"=>"course");
+	$sql = "SELECT token from mdl_external_tokens";	
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		while($r = mysqli_fetch_assoc($result)) {
+			
+			//$respocetype = array("type"=>"student");
+			$a=$r["token"];
+			//$results = json_encode($a);
+			if($a == $store)
+			value=1;
+			else
+			value=0;	
+       //$c= $conn->query($abc);
+
+		}
+}}
+
+?>
+
+
+$abc=json_encode($usertoken);
+     $json11 = json_decode($abc,true);
+    //echo $json11;
+
+    foreach ($json11 as $key => $value){
+        if($key=="token")
+	{
+        echo "abcd";
+        echo $value ;
+        $store=$value;
+        break;
+    }
+	//echo "$key: $value\n";
+    };
+	//$respocetype = array("type"=>"course");
+	$sql = "SELECT token from mdl_external_tokens";	
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		while($r = mysqli_fetch_assoc($result)) {
+			
+			//$respocetype = array("type"=>"student");
+			$a=$r["token"];
+			//$results = json_encode($a);
+			if($a == $store)
+			{
+                $value=1;
+                break;
+            }
+			else
+			$value=0;	
+       //$c= $conn->query($abc);
+
+		}
+}
+
+
+if($value==1){
+    $myObj->Validation = "true";
+echo json_encode($myObj);
+}
+else {
+    $myObj->Validation = "false";
+   echo  json_encode($myObj);
+}
